@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://vhg.cmp.uea.ac.uk/tech/jas/vhg2017/WebGLAv.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>CoffeeScript WebGL ARP Signing Avatar: vhg.2017</title>
+
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<meta http-equiv="Access-Control-Allow-Methods" content="GET">
+
+<!-- CWA @ vhg.cmp.uea.ac.uk/jrwg/ -->
+<link rel="stylesheet" href="/Avatar/CoffeeScript WebGL ARP Signing Avatar_ vhg.2017_files/cwasa.css">
+<script type="text/javascript" src="/Avatar/CoffeeScript WebGL ARP Signing Avatar_ vhg.2017_files/allcsa.js.download"></script>
+</head>
+
+<body onload="CWASA.init();">
+
+<!--================================================================-->
+<h3>CoffeeScript WebGL ARP Signing Avatar with Animgen via JASigning: vhg.2017</h3>
+<h4>Single Signing Avatar with complete GUI</h4>
+<hr>
+
+<!-- CWA signing avatar panel 0 -->
+<!--================================================================-->
+<div class="CWASAPanel av1" align="center"><table class="avTable av1"><tbody><tr>
+<td align="center">
+  <div class="divCtrlPanel">
+  <!--========================================================-->
+<span class="spanPlayA av0"> 
+Avatar:
+<select class="menuAv av0">
+<option value="anna">anna</option>
+<option value="beatrice">beatrice</option>
+<option value="candy">candy</option>
+<option value="darshan">darshan</option>
+<option value="francoise">francoise</option>
+<option value="genie">genie</option>
+<option value="luna" selected="selected">luna</option>
+<option value="marc">marc</option>
+<option value="max">max</option>
+<option value="monkey">monkey</option>
+<option value="otis">otis</option>
+<option value="robotboy">robotboy</option>
+<option value="siggi">siggi</option>
+</select>
+</span>  <!--class="spanPlayA av0"-->
+<br>
+<!--========================================================-->
+<span class="spanSpeed av0">
+Speed (log<sub>2</sub> scale):
+<input type="text" class="txtLogSpeed av0" value="+1.0">
+<input type="button" value="-" class="bttnSpeedDown av0">
+<input type="button" value="+" class="bttnSpeedUp av0">
+<input type="button" value="Reset" class="bttnSpeedReset av0" disabled="">
+</span>  <!--class="spanSpeed av0"-->
+<br>
+<hr style="height:1px;">
+<span align="center" class="divSiGML av0">
+SiGML URL:<br>
+<input type="text" class="txtSiGMLURL av0" value="scotland-H.sigml"><br>
+
+SiGML Text:<br>
+<textarea class="txtaSiGMLText av0" rows="4">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;sigml&gt;
+
+&lt;hns_sign gloss="mug"&gt;
+  &lt;hamnosys_nonmanual&gt;
+    &lt;hnm_mouthpicture picture="mVg"/&gt;
+  &lt;/hamnosys_nonmanual&gt;
+  &lt;hamnosys_manual&gt;
+    &lt;hamfist/&gt; &lt;hamthumbacrossmod/&gt;
+        &lt;hamextfingerol/&gt; &lt;hampalml/&gt;
+    &lt;hamshoulders/&gt;
+    &lt;hamparbegin/&gt; &lt;hammoveu/&gt; &lt;hamarcu/&gt;
+        &lt;hamreplace/&gt; &lt;hamextfingerul/&gt; &lt;hampalmdl/&gt;
+    &lt;hamparend/&gt;
+  &lt;/hamnosys_manual&gt;
+&lt;/hns_sign&gt;
+
+&lt;hns_sign gloss="take"&gt;
+  &lt;hamnosys_nonmanual&gt;
+    &lt;hnm_mouthpicture picture="te_Ik"/&gt;
+  &lt;/hamnosys_nonmanual&gt;
+  &lt;hamnosys_manual&gt;
+    &lt;hamceeall/&gt; &lt;hamextfingerol/&gt; &lt;hampalml/&gt;
+    &lt;hamlrbeside/&gt; &lt;hamshoulders/&gt; &lt;hamarmextended/&gt;
+    &lt;hamreplace/&gt; &lt;hamextfingerl/&gt; &lt;hampalml/&gt;
+    &lt;hamchest/&gt; &lt;hamclose/&gt;
+  &lt;/hamnosys_manual&gt;
+&lt;/hns_sign&gt;
+
+&lt;hns_sign gloss="i"&gt;
+  &lt;hamnosys_nonmanual&gt;
+    &lt;hnm_mouthpicture picture="a_I"/&gt;
+  &lt;/hamnosys_nonmanual&gt;
+  &lt;hamnosys_manual&gt;
+    &lt;hamfinger2/&gt; &lt;hamthumbacrossmod/&gt;
+    &lt;hamextfingeril/&gt; &lt;hampalmr/&gt;
+    &lt;hamchest/&gt; &lt;hamtouch/&gt;
+  &lt;/hamnosys_manual&gt;
+&lt;/hns_sign&gt;
+
+&lt;/sigml&gt;
+</textarea>
+</span>  <!--class="divSiGML av0"-->
+<br>
+<!--========================================================-->
+<span class="spanSiGMLCtrlA av0">
+<!--input type="button" value="Play CAS" class="bttnPlayCAS av0" /-->
+<input type="button" value="Play SiGML URL" class="bttnPlaySiGMLURL av0">
+<input type="button" value="Play SiGML Text" class="bttnPlaySiGMLText av0">
+&nbsp;
+<input type="button" value="Stop" class="bttnStop av0" disabled="">
+</span>  <!--class="spanSiGMLCtrlA av0"-->
+<br>
+<span align="center" class="spanSiGMLCtrlB av0">
+<input type="button" value="Suspend" class="bttnSuspend av0" disabled="">
+<input type="button" value="Resume" class="bttnResume av0" disabled="">
+&nbsp;
+Frames:
+<input type="button" value="-1" class="bttnPrevF av0" disabled="">
+<input type="button" value="+1" class="bttnNextF av0" disabled="">
+</span>  <!--class="spanSiGMLCtrlB av0"-->
+<br>
+<!--========================================================-->
+<hr style="height:1px;">
+<!--========================================================-->
+<span class="spanInfo av0">
+Sign/Frame:
+<input type="text" class="txtSF av0" value="0/0">
+&nbsp;
+Gloss:
+<input type="text" class="txtGloss av0" value="[none]">
+&nbsp;
+FPS:
+<input type="text" class="txtFPS av0" value="00.00">
+</span>  <!--class="spanInfo av0"-->
+<br>
+<!--========================================================-->
+<span class="spanInfo av0">
+Status:
+<input type="text" class="statusExtra av0">
+</span>  <!--class="spanInfo av0"-->
+</div>
+</td>
+<td width="8"></td>
+<td width="384" height="320">
+  <div class="divAv av1">
+  <canvas class="canvasAv av1" ondragstart="return false" width="384" height="318"></canvas>
+</div>  <!--class="divAv av0"-->
+</td>
+</tr></tbody></table></div>
+<!--================================================================-->
+<hr>
+
+<!-- CWA signing avatar panel 1 -->
+<!--================================================================-->
+<!--div class="CWASAPanel av1" align="center" ></div-->
+<!--================================================================-->
+<!--hr-->
+
+
+<!-- Hidden SToCA applet element panel -->
+<!--================================================================-->
+<div class="SToCA" align="center"></div>
+<!--================================================================-->
+
+
+
+</body></html>

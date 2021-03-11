@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <script src="/public/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+
+<body id="main-body">
+    <div id="avatar-frame">
+        <%- include("../Avatar/index.html") %>
+    </div>
+    <h3>Text:</h3>
+    <div id="text"></div>
+    <hr>
+    <h3>Sign Text:</h3>
+    <div id="sign-text"></div>
+    <hr>
+    <div id="controls">
+        <button id="speak-btn">Speak</button>
+        <button id="stop-btn">Stop</button>
+    </div>
+</body>
+<script src="/public/js/main.js"></script>
+
+</html>

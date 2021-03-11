@@ -1,0 +1,30 @@
+#main-body {
+    overflow: auto;
+}
+
+#avatar-frame h3,
+#avatar-frame h4,
+.CWASAPanel td:first-child {
+    display: none;
+}
+
+.divAv,
+.canvasAv {
+    height: 500px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+#stop-btn {
+    display: none;
+}
+
+#text,
+#sign-text {
+    font-size: large;
+}
+
+.playing-word {
+    background: red;
+    font-weight: bold;
+}

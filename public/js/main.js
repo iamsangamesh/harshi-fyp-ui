@@ -24,10 +24,10 @@ $("#stop-btn").click(function () {
 let words = [];
 let index = 0;
 
-function playNext() {
+function playNextWord() {
     if ($(".bttnPlaySiGMLURL").attr("disabled")) {
         console.log("waiting");
-        return setTimeout(playNext, 1000);
+        return setTimeout(playNextWord, 1000);
     }
     playWord();
 }
@@ -36,16 +36,20 @@ function hasNext() {
     return index < words.length;
 }
 
-function playWord() {
-    console.log("playing word::", words[index])
-    const link = "http://localhost:9000/public/SignFiles/" + words[index] + ".sigml";
-    document.querySelector(".txtSiGMLURL.av1").value = link;
+function setWordBg(){
     $(".word").removeClass("playing-word");
     $("#word-"+words[index]).addClass("playing-word");
+}
+
+function playWord() {
+    console.log("playing word::", words[index])
+    setWordBg();
+    const link = "http://localhost:9000/public/SignFiles/" + words[index] + ".sigml";
+    document.querySelector(".txtSiGMLURL.av1").value = link;
     $(".bttnPlaySiGMLURL").click();
-    index++
+    index++;
     if (hasNext()) {
-        return playNext();
+        return playNextWord();
     }
     console.log("done")
 }

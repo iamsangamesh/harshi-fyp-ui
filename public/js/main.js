@@ -18,8 +18,27 @@ $("#stop-btn").click(function () {
     $("#speak-btn").show();
     $("#stop-btn").hide();
     recognition.stop();
-    startAnimation();
+    if($("#role").val()=="translator")
+        getTranslatedtext();
+    else{
+        getResponsortext();
+    }
 });
+
+function getResponse(url){
+    $.get(url, function (resp) {
+        text = resp.pre_process_string;
+        startAnimation();
+    });
+}
+
+function getResponsortext(){
+    getResponse("http://localhost:9000/responsor?speech=" + text);
+}
+
+function getTranslatedtext() {
+    getResponse("http://localhost:9000/parser?speech=" + text);
+}
 
 let words = [];
 let index = 0;
